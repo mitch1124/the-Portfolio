@@ -40,19 +40,19 @@ export const BaseballBackground = () => {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-      {baseballs.map((baseballs) => (
+      {baseballs.map((ball) => (
         <img
-          key={baseball.id}
+          key={ball.id}
           src={baseball}
           alt="baseball"
-          className="absolute animate-pulse-subtle"
+          className="absolute"
           style={{
-            width: baseballs.size + "px",
-            height: baseballs.size + "px",
-            left: baseballs.x + "%",
-            top: baseballs.y + "%",
-            opacity: baseballs.opacity,
-            transform: `rotate(${baseballs.rotation}deg)`,
+            width: `${ball.size}px`,
+            height: `${ball.size}px`,
+            left: `${ball.x}%`,
+            top: `${ball.y}%`,
+            opacity: ball.opacity,
+            transform: `rotate(${ball.rotation}deg)`,
           }}
         />
       ))}
